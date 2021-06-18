@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/Maxiiminus2/calc.git'
-                sh './mvnw clean compile'
+                sh './mvnw clean compile verify sonar:sonar'
             }
         }
         stage('Test') {

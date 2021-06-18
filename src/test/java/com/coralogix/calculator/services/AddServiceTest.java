@@ -17,4 +17,16 @@ public class AddServiceTest {
         // then
         assertEquals(result.getResult(), 4);
     }
+
+    @Test
+    public void addIntegers2() {
+        //given
+        AddService service = new AddService();
+
+        //when
+        Result result = service.add(1, -4);
+
+        //then
+        assertEquals(result.getResult(), -3);
+    }
 }
